@@ -44,6 +44,7 @@ options {
 
 program
     : programHeading (INTERFACE)? block DOT EOF
+    | (classDefinition | classInstantiation | stat)* EOF
     ;
 
 programHeading
@@ -67,6 +68,29 @@ block
     )* compoundStatement
     ;
 
+classDefinition
+    : procedureType identifier DOT identifier SEMI compoundStatement SEMI
+    ;
+
+stat: IDENT '=' expr
+    | expr
+    ;
+    
+expr: IDENT
+    | NUM_INT
+    | func
+    | classInstantiation
+    ;
+
+func : IDENT '(' expr (',' expr)* ')' ;
+
+classInstantiation
+    : identifier '(' ')'
+    | CLASS identifier '(' ')'
+    | identifier ASSIGN identifier
+    | identifier ASSIGN identifier DOT identifier
+    ;
+    
 usesUnitsPart
     : USES identifierList SEMI
     ;
@@ -810,7 +834,7 @@ COMMENT_2
     ;
 
 IDENT
-    : ('A' .. 'Z') ('A' .. 'Z' | '0' .. '9' | '_')*
+    : ('A' .. 'Z')('A' .. 'Z' | '0' .. '9' | '_')*
     ;
 
 STRING_LITERAL
@@ -827,4 +851,8 @@ NUM_REAL
 
 fragment EXPONENT
     : ('E') ('+' | '-')? ('0' .. '9')+
+    ;
+    
+CLASS 
+    : 'CLASS' 
     ;

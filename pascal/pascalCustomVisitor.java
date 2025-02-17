@@ -83,6 +83,19 @@ public class pascalCustomVisitor extends pascalBaseVisitor<Void> {
         }
         return null;
     }
+
+    @Override
+    public Void visitClassDefinition(pascalParser.ClassDefinitionContext ctx) {
+        String procedureType = ctx.procedureType().getText();
+        String className = ctx.identifier(0).getText();
+        String methodName = ctx.identifier(1).getText();
+        String compoundStatement = ctx.compoundStatement().getText();
+
+        System.out.println(procedureType + " " + className + "." + methodName + "; \n");
+        System.out.println(compoundStatement + ";");
+
+        return null;
+    }
     
     // evaluateExpression
 }

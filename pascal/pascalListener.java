@@ -1,4 +1,4 @@
-// Generated from pascal.g4 by ANTLR 4.13.2
+// Generated from pascal.g4 by ANTLR 4.13.0
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -46,6 +46,56 @@ public interface pascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBlock(pascalParser.BlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link pascalParser#classDefinition}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassDefinition(pascalParser.ClassDefinitionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link pascalParser#classDefinition}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassDefinition(pascalParser.ClassDefinitionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link pascalParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void enterStat(pascalParser.StatContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link pascalParser#stat}.
+	 * @param ctx the parse tree
+	 */
+	void exitStat(pascalParser.StatContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link pascalParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpr(pascalParser.ExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link pascalParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpr(pascalParser.ExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link pascalParser#func}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunc(pascalParser.FuncContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link pascalParser#func}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunc(pascalParser.FuncContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link pascalParser#classInstantiation}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassInstantiation(pascalParser.ClassInstantiationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link pascalParser#classInstantiation}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassInstantiation(pascalParser.ClassInstantiationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link pascalParser#usesUnitsPart}.
 	 * @param ctx the parse tree

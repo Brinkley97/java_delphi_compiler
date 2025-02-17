@@ -1,4 +1,4 @@
-// Generated from pascal.g4 by ANTLR 4.13.2
+// Generated from pascal.g4 by ANTLR 4.13.0
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -33,6 +33,36 @@ public interface pascalVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBlock(pascalParser.BlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link pascalParser#classDefinition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClassDefinition(pascalParser.ClassDefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link pascalParser#stat}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStat(pascalParser.StatContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link pascalParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpr(pascalParser.ExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link pascalParser#func}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunc(pascalParser.FuncContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link pascalParser#classInstantiation}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClassInstantiation(pascalParser.ClassInstantiationContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link pascalParser#usesUnitsPart}.
 	 * @param ctx the parse tree
